@@ -6,7 +6,7 @@ const withCSS = require('@zeit/next-css');
 // next.js configuration
 const nextConfig = {
   env: {
-    BACKEND_URL: 'https://localhost:7293/api/',
+    BACKEND_URL: 'https://snkr-backend-service.azurewebsites.net/api/',
     STRIPE_TOKEN: 'pk_test_51K4PucBIt5wm3TS1PCt6gqbI6pdNdp5bu9gxF4QgRMkfNQgxKBMBRoh3pvFOtuW3AbzlBYj7IgkKxlj7pSQwcdl400HWOH1ery',
   },
   webpack: config => {
