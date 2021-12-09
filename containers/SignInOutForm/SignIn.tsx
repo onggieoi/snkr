@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import { useRouter } from "next/router";
+
 import {
   LinkButton,
   Button,
@@ -25,12 +27,12 @@ export default function SignInModal() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
+  const router = useRouter();
+
   const dispatch = useAppDispatch();
 
   const toggleSignUpForm = () => {
-    authDispatch({
-      type: 'SIGNUP',
-    });
+    router.push('/signup');
   };
 
   const toggleForgotPassForm = () => {

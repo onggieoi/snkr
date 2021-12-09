@@ -120,7 +120,6 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
 
   useEffect(() => {
     if (
-      totalPrice > 0 &&
       items.length > 0 &&
       addresses.length &&
       contacts.length &&
