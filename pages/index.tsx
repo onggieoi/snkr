@@ -94,7 +94,6 @@ function HomePage({ deviceType }) {
               <ContentSection>
                 <div ref={targetRef}>
                   <Products
-                    type={PAGE_TYPE}
                     deviceType={deviceType}
                     fetchLimit={16}
                   />
@@ -113,7 +112,6 @@ function HomePage({ deviceType }) {
             </OfferSection>
             <ContentSection style={{ width: '100%' }}>
               <Products
-                type={PAGE_TYPE}
                 deviceType={deviceType}
                 fetchLimit={16}
               />

@@ -31,13 +31,11 @@ type ProductsProps = {
     tablet: boolean;
     desktop: boolean;
   };
-  type: string;
   fetchLimit?: number;
   loadMore?: boolean;
 };
 export const Products: React.FC<ProductsProps> = ({
   deviceType,
-  type,
   fetchLimit = 8,
   loadMore = true,
 }) => {
