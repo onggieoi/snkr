@@ -10,6 +10,7 @@ import { getMe } from "redux/account/accountReducer";
 import { AuthContext } from "contexts/auth/auth.context";
 import { useRouter } from "next/router";
 import InlineLoader from "components/InlineLoader";
+import _ from "lodash";
 
 type Props = {
   deviceType: {
@@ -34,7 +35,7 @@ const CheckoutPage: NextPage<Props> = ({ deviceType }) => {
     return <div>loading...</div>;
   }
 
-  if (!authState.isAuthenticated) {
+  if (!authState.isAuthenticated && !_.isUndefined(window)) {
     router.push("/");
   }
 
@@ -45,7 +46,7 @@ const CheckoutPage: NextPage<Props> = ({ deviceType }) => {
       </Head>
 
       {loading && <InlineLoader />}
-      
+
       <ProfileProvider initData={me}>
         <Modal>
           {me &&
